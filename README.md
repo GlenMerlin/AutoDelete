@@ -1,18 +1,6 @@
-# Hiatus, Unsupported Versions, Rate Limiting & Self Hosting
-
-The creator of this bot is on an extended break, with no ETA to return to this project.
-
-The below instructions are kept as a guide for existing installs. The share community version of the bot is rate limited. It sometimes works and sometimes doesn't.
-
-**Using the shared community version of this bot is no longer supported and not recommended.**
-
-Self-Hosting the bot (via Azure, AWS, Oracle Cloud, Docker instances) is provided via the Discord as a best effort process, but the underlying code is no longer being actively maintained. This message will be removed when this is no longer the case
-
--- 15-JAN-2023
-
 # AutoDelete
 
-### _retention policies for 'gamers'_
+### _retention policies
 
 **AutoDelete** is a Discord bot that will automatically delete messages from a designated channel.
 
@@ -20,9 +8,7 @@ Messages are deleted on a "rolling" basis -- if you set a 24-hour live time, eac
 
 If you have an urgent message about the operation of the bot, say `@AutoDelete adminhelp ... your message here ...` and I'll get back to you as soon as I see it.
 
-Add it to your server here: https://autodelete.riking.org/discord_auto_delete/oauth/start
-
-**[Support me on Patreon](https://patreon.com/riking)** if you enjoy the bot or to help keep it running! https://www.patreon.com/riking
+**[Support the original creator on Patreon](https://patreon.com/riking)** if you enjoy the bot or to help keep it running! https://www.patreon.com/riking
 
 Announcements server: https://discord.gg/FUGn8yE
 
@@ -46,46 +32,6 @@ To turn off the bot, use `@AutoDelete set 0` to turn off auto-deletion.
 For a quick reminder of these rules, just say `@AutoDelete help`.
 
 If you need extra help, say `@AutoDelete adminhelp ... message ...` to send a message to the support guild.
-
-## Deployment
-
-### Custom
-
-See the [docs](./docs) directory for setup scripts and the configuration files that run the official bot instance.
-
-### Docker
-
-How to build the docker containers:
-
-```
-docker build -t myimages/autodelete:tag .
-```
-
-Pre-built docker containers have been uploaded by the community to https://hub.docker.com/ if you wish to use them. These image owners should also be contactable over the support Discord server.
-
-Required Mounts: 
-
-```
-/path/to/storage/config.yml:/autodelete/config.yml
-/path/to/storage/data/:/autodelete/data/
-```
-
-Example:
-
-```
-docker run -d -p 2202:2202/tcp \
- --name Autodelete \
- -v /opt/AutoDelete/config.yml:/autodelete/config.yml \
- -v /opt/AutoDelete/data/:/autodelete/data/ \
- --restart=always \
- myimages/autodelete:tag
-```
-
-## Policy
-
-The following two sections apply only to the hosted, community instance that can be invited to your server at the link above, as well as the help server and this GitHub repository.
-
-Any changes to the following policies will be announced on the support server in the #announce channel.
 
 ### Privacy
 

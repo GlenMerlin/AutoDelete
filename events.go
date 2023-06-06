@@ -12,7 +12,7 @@ import (
 	"github.com/pkg/errors"
 )
 
-const userAgent = "AutoDelete (https://github.com/riking/AutoDelete, v1.4)"
+const userAgent = "AutoDelete (https://github.com/GlenMerlin/AutoDelete, v1.4)"
 
 type userAgentSetter struct {
 	t http.RoundTripper
